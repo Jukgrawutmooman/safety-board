@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety Information Board</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: transparent;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 8px;
+    }
+
+    .board {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .card {
+      flex: 1;
+      border-radius: 10px;
+      padding: 22px 18px;
+      text-align: center;
+    }
+
+    /* Card 1: Days No Accident */
+    .card-green {
+      background: #00B19D;
+    }
+    .card-green .label { color: rgba(255,255,255,0.75); }
+    .card-green .number { color: #ffffff; }
+    .card-green .sub { color: rgba(255,255,255,0.85); }
+    .card-green .bar-bg { background: rgba(255,255,255,0.25); }
+    .card-green .bar-fill { background: #ffffff; }
+
+    /* Card 2: Target Days */
+    .card-white {
+      background: #ffffff;
+      border: 1.5px solid #00B19D;
+    }
+    .card-white .label { color: #00B19D; }
+    .card-white .number { color: #1A1A2E; }
+    .card-white .sub { color: #888888; }
+    .card-white .bar-bg { background: #E0F5F3; }
+    .card-white .bar-fill { background: #00B19D; }
+
+    /* Card 3: Serious Accident */
+    .card-red {
+      background: #FCEBEB;
+      border: 1.5px solid #F09595;
+    }
+    .card-red .label { color: #A32D2D; }
+    .card-red .number { color: #E24B4A; }
+    .card-red .sub { color: #A32D2D; }
+
+    .label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .number {
+      font-size: 52px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    .sub {
+      font-size: 11px;
+      margin-bottom: 12px;
+    }
+
+    .bar-bg {
+      border-radius: 4px;
+      height: 5px;
+    }
+
+    .bar-fill {
+      height: 5px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="board">
+
+    <!-- Card 1: Days No Accident -->
+    <div class="card card-green">
+      <div class="label">DAYS NO ACCIDENT</div>
+      <div class="number">1,195</div>
+      <div class="sub">บรรลุ 65% ของ Target</div>
+      <div class="bar-bg">
+        <div class="bar-fill" style="width:65%;"></div>
+      </div>
+    </div>
+
+    <!-- Card 2: Target Days FY2026 -->
+    <div class="card card-white">
+      <div class="label">TARGET DAYS FY2026</div>
+      <div class="number">1,826</div>
+      <div class="sub">เป้าหมาย 5 ปี</div>
+      <div class="bar-bg">
+        <div class="bar-fill" style="width:65%;"></div>
+      </div>
+    </div>
+
+    <!-- Card 3: Serious Accident -->
+    <div class="card card-red">
+      <div class="label">SERIOUS ACCIDENT YTD</div>
+      <div class="number">3</div>
+      <div class="sub">เพิ่ม 1 จากปีก่อน</div>
+    </div>
+
+  </div>
+</body>
+</html>
